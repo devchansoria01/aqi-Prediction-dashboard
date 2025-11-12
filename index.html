@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQI Prediction Results</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-title">AQI Prediction</div>
+            <ul class="nav-links">
+                <li><a onclick="showPage('transformer')" class="nav-link active" data-page="transformer">Transformer Model</a></li>
+                <li><a onclick="showPage('randomforest')" class="nav-link" data-page="randomforest">Random Forest</a></li>
+                <li><a onclick="showPage('lstm')" class="nav-link" data-page="lstm">LSTM</a></li>
+                <li><a onclick="showPage('comparison')" class="nav-link" data-page="comparison">Comparison</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Transformer Model Page -->
+        <div id="transformer" class="page active">
+            <div class="page-header">
+                <h1 class="page-title">Transformer Model Results</h1>
+                <p class="page-subtitle">AQI prediction results using Transformer architecture</p>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-box">
+                    <span class="metric-label">Mean Error (ME)</span>
+                    <div class="metric-value">--</div>
+                    <span class="metric-unit">Value to be added</span>
+                </div>
+                <div class="metric-box">
+                    <span class="metric-label">Root Mean Square Error</span>
+                    <div class="metric-value">--</div>
+                    <span class="metric-unit">RMSE Value</span>
+                </div>
+                <div class="metric-box">
+                    <span class="metric-label">Model Accuracy</span>
+                    <div class="metric-value">--</div>
+                    <span class="metric-unit">Percentage</span>
+                </div>
+            </div>
+
+            <div class="graph-section">
+                <h2 class="graph-title">Actual vs. Predicted AQI (t+1 hour)</h2>
+                <div class="graph-container">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/aqi_actual_vs_predicted-lx6krpukWSFBO4KFhYSp1yzO02IfaS.png" alt="Transformer Model Scatter Plot" class="graph-image">
+                </div>
+            </div>
+
+            <div class="forecast-section">
+                <h2 class="forecast-title">72-Hour AQI Forecast</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hour</th>
+                            <th>Predicted AQI</th>
+                            <th>Forecast Range</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>+1h</td>
+                            <td>--</td>
+                            <td>-- to --</td>
+                            <td><span class="value-good">Data Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>+24h</td>
+                            <td>--</td>
+                            <td>-- to --</td>
+                            <td><span class="value-good">Data Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>+48h</td>
+                            <td>--</td>
+                            <td>-- to --</td>
+                            <td><span class="value-good">Data Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>+72h</td>
+                            <td>--</td>
+                            <td>-- to --</td>
+                            <td><span class="value-good">Data Pending</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Random Forest Page -->
+        <div id="randomforest" class="page">
+            <div class="page-header">
+                <h1 class="page-title">Random Forest Model Results</h1>
+                <p class="page-subtitle">AQI prediction results using Random Forest algorithm</p>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-box">
+                    <span class="metric-label">Mean Error (ME)</span>
+                    <div class="metric-value">--</div>
+                    <span class="metric-unit">Value to be added</span>
+                </div>
+                <div class="metric-box">
+                    <span class="metric-label">Root Mean Square Error</span>
+                    <div class="metric-value">--</div>
+                    <span class="metric-unit">RMSE Value</span>
+                </div>
+                <div class="metric-box">
+                    <span class="metric-label">Model Accuracy</span>
+                    <div class="metric-value">--</div>
+                    <span class="metric-unit">Percentage</span>
+                </div>
+            </div>
+
+            <div class="graph-section">
+                <h2 class="graph-title">Actual vs. Predicted AQI (t+1 hour)</h2>
+                <div class="graph-container">
+                    <div class="graph-placeholder">
+                        <div class="graph-placeholder-icon">📊</div>
+                        <div class="graph-placeholder-text">Graph data to be provided</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast-section">
+                <h2 class="forecast-title">72-Hour AQI Forecast</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hour</th>
+                            <th>Predicted AQI</th>
+                            <th>Forecast Range</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>+1h</td>
+                            <td>--</td>
+                            <td>-- to --</td>
+                            <td><span class="value-good">Data Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>+24h</td>
+                            <td>--</td>
+                            <td>-- to --</td>
+                            <td><span class="value-good">Data Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>+48h</td>
+                            <td>--</td>
+                            <td>-- to --</td>
+                            <td><span class="value-good">Data Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>+72h</td>
+                            <td>--</td>
+                            <td>-- to --</td>
+                            <td><span class="value-good">Data Pending</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- LSTM Page -->
+        <div id="lstm" class="page">
+            <div class="page-header">
+                <h1 class="page-title">LSTM Model Results</h1>
+                <p class="page-subtitle">AQI prediction results using Long Short-Term Memory networks</p>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-box">
+                    <span class="metric-label">Mean Error (ME)</span>
+                    <div class="metric-value">--</div>
+                    <span class="metric-unit">Value to be added</span>
+                </div>
+                <div class="metric-box">
+                    <span class="metric-label">Root Mean Square Error</span>
+                    <div class="metric-value">--</div>
+                    <span class="metric-unit">RMSE Value</span>
+                </div>
+                <div class="metric-box">
+                    <span class="metric-label">Model Accuracy</span>
+                    <div class="metric-value">--</div>
+                    <span class="metric-unit">Percentage</span>
+                </div>
+            </div>
+
+            <div class="graph-section">
+                <h2 class="graph-title">Actual vs. Predicted AQI (t+1 hour)</h2>
+                <div class="graph-container">
+                    <div class="graph-placeholder">
+                        <div class="graph-placeholder-icon">📊</div>
+                        <div class="graph-placeholder-text">Graph data to be provided</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast-section">
+                <h2 class="forecast-title">72-Hour AQI Forecast</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hour</th>
+                            <th>Predicted AQI</th>
+                            <th>Forecast Range</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>+1h</td>
+                            <td>--</td>
+                            <td>-- to --</td>
+                            <td><span class="value-good">Data Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>+24h</td>
+                            <td>--</td>
+                            <td>-- to --</td>
+                            <td><span class="value-good">Data Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>+48h</td>
+                            <td>--</td>
+                            <td>-- to --</td>
+                            <td><span class="value-good">Data Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>+72h</td>
+                            <td>--</td>
+                            <td>-- to --</td>
+                            <td><span class="value-good">Data Pending</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Comparison Page -->
+        <div id="comparison" class="page">
+            <div class="page-header">
+                <h1 class="page-title">Model Comparison</h1>
+                <p class="page-subtitle">Performance comparison across all three models</p>
+            </div>
+
+            <div class="graph-section">
+                <h2 class="graph-title">Performance Metrics Comparison</h2>
+                <div class="graph-container">
+                    <div class="graph-placeholder">
+                        <div class="graph-placeholder-icon">📈</div>
+                        <div class="graph-placeholder-text">Comparison graph data to be provided</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <div class="comparison-model-name">
+                        <span class="model-badge"></span>
+                        Transformer
+                    </div>
+                    <div class="comparison-metrics">
+                        <div class="comparison-metric-item">
+                            <span class="comparison-metric-label">Mean Error</span>
+                            <span class="comparison-metric-value">--</span>
+                        </div>
+                        <div class="comparison-metric-item">
+                            <span class="comparison-metric-label">RMSE</span>
+                            <span class="comparison-metric-value">--</span>
+                        </div>
+                        <div class="comparison-metric-item">
+                            <span class="comparison-metric-label">Accuracy</span>
+                            <span class="comparison-metric-value">--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comparison-card">
+                    <div class="comparison-model-name">
+                        <span class="model-badge" style="background-color: var(--accent-cyan);"></span>
+                        Random Forest
+                    </div>
+                    <div class="comparison-metrics">
+                        <div class="comparison-metric-item">
+                            <span class="comparison-metric-label">Mean Error</span>
+                            <span class="comparison-metric-value">--</span>
+                        </div>
+                        <div class="comparison-metric-item">
+                            <span class="comparison-metric-label">RMSE</span>
+                            <span class="comparison-metric-value">--</span>
+                        </div>
+                        <div class="comparison-metric-item">
+                            <span class="comparison-metric-label">Accuracy</span>
+                            <span class="comparison-metric-value">--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comparison-card">
+                    <div class="comparison-model-name">
+                        <span class="model-badge" style="background-color: var(--success);"></span>
+                        LSTM
+                    </div>
+                    <div class="comparison-metrics">
+                        <div class="comparison-metric-item">
+                            <span class="comparison-metric-label">Mean Error</span>
+                            <span class="comparison-metric-value">--</span>
+                        </div>
+                        <div class="comparison-metric-item">
+                            <span class="comparison-metric-label">RMSE</span>
+                            <span class="comparison-metric-value">--</span>
+                        </div>
+                        <div class="comparison-metric-item">
+                            <span class="comparison-metric-label">Accuracy</span>
+                            <span class="comparison-metric-value">--</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast-section">
+                <h2 class="forecast-title">72-Hour Forecast Comparison</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hour</th>
+                            <th>Transformer</th>
+                            <th>Random Forest</th>
+                            <th>LSTM</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>+1h</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                        </tr>
+                        <tr>
+                            <td>+24h</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                        </tr>
+                        <tr>
+                            <td>+48h</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                        </tr>
+                        <tr>
+                            <td>+72h</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
