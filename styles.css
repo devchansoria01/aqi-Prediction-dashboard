@@ -4,6 +4,41 @@
     box-sizing: border-box;
 }
 
+
+
+#comparison-forecast {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#comparison-forecast thead {
+  background-color: #1a1a2e;
+  color: #00d4ff;
+}
+
+#comparison-forecast th {
+  padding: 12px;
+  text-align: center;
+  font-weight: 600;
+  border-bottom: 2px solid #00d4ff;
+}
+
+#comparison-forecast td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #333;
+  text-align: center;
+}
+
+#comparison-forecast tbody tr:hover {
+  background-color: #16213e;
+}
+
+#comparison-forecast .aqi-value {
+  font-weight: 500;
+  text-align: center;
+}
+
 :root {
     --bg-primary: #0f172a;
     --bg-secondary: #1a2844;
